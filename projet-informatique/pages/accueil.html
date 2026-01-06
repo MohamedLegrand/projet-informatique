@@ -20,184 +20,416 @@
       .then(data => document.getElementById('header-placeholder').innerHTML = data);
   </script>
 
-  <!-- Hero Section -->
+  <!-- Hero Section avec texte à gauche et carrousel à droite -->
   <section class="hero">
-    <div class="hero-text">
-      <h1>Bienvenue chez Boutique Informatique</h1>
-      <p>Découvrez nos équipements informatiques : machines, câbles, souris, imprimantes et bien plus.</p>
-      <a href="#produits" class="btn-hero">Découvrir nos produits</a>
+    <div class="hero-container">
+      <!-- Texte à gauche -->
+      <div class="hero-text">
+        <div class="hero-content">
+          <h1 class="hero-title">
+            <span class="title-line">Bienvenue chez</span>
+            <span class="title-highlight">Boutique Informatique</span>
+          </h1>
+          
+          <p class="hero-subtitle">
+            L'excellence informatique à portée de clic
+          </p>
+          
+          <p class="hero-description">
+            Explorez notre univers high-tech où performance rime avec accessibilité. 
+            Des composants PC aux périphériques dernier cri, nous sélectionnons 
+            rigoureusement chaque produit pour vous garantir qualité et durabilité.
+          </p>
+          
+          <div class="hero-stats">
+            <div class="stat">
+              <span class="stat-number">1000+</span>
+              <span class="stat-label">Clients satisfaits</span>
+            </div>
+            <div class="stat">
+              <span class="stat-number">99%</span>
+              <span class="stat-label">Taux de satisfaction</span>
+            </div>
+            <div class="stat">
+              <span class="stat-number">24/7</span>
+              <span class="stat-label">Support client</span>
+            </div>
+          </div>
+          
+          <div class="hero-buttons">
+            <a href="#produits" class="btn btn-primary">
+              <span class="btn-icon">✨</span>
+              Explorer nos produits
+            </a>
+            <a href="../pages/contact.html" class="btn btn-secondary">
+              <span class="btn-icon">🎯</span>
+              Devis gratuit
+            </a>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Carrousel à droite - Version compacte -->
+      <div class="hero-carrousel">
+        <div class="carrousel-container">
+          <!-- Slides du carrousel -->
+          <div class="carrousel-slide active">
+            <div class="slide-image">
+              <img src="../assets/images/equipement.jpg" alt="Équipements informatiques">
+            </div>
+            <div class="slide-overlay">
+              <span class="slide-category">Tendances 2024</span>
+              <h3 class="slide-title">Setup Gamer Complet</h3>
+            </div>
+          </div>
+          
+          <div class="carrousel-slide">
+            <div class="slide-image">
+              <img src="../assets/images/souris.jpg" alt="Souris Gaming">
+            </div>
+            <div class="slide-overlay">
+              <span class="slide-category">Top Vente</span>
+              <h3 class="slide-title">Souris RGB 16K DPI</h3>
+            </div>
+          </div>
+          
+          <div class="carrousel-slide">
+            <div class="slide-image">
+              <img src="../assets/images/clavier.jpg" alt="Clavier mécanique">
+            </div>
+            <div class="slide-overlay">
+              <span class="slide-category">Premium</span>
+              <h3 class="slide-title">Clavier Mécanique Cherry MX</h3>
+            </div>
+          </div>
+          
+          <div class="carrousel-slide">
+            <div class="slide-image">
+              <img src="../assets/images/imprimante.jpg" alt="Imprimante Laser">
+            </div>
+            <div class="slide-overlay">
+              <span class="slide-category">Professionnel</span>
+              <h3 class="slide-title">Imprimante Multifonction</h3>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Contrôles du carrousel -->
+        <div class="carrousel-controls">
+          <button class="carrousel-btn prev-btn" aria-label="Image précédente">
+            <svg viewBox="0 0 24 24">
+              <path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"/>
+            </svg>
+          </button>
+          
+          <div class="carrousel-indicators">
+            <div class="indicator active"></div>
+            <div class="indicator"></div>
+            <div class="indicator"></div>
+            <div class="indicator"></div>
+          </div>
+          
+          <button class="carrousel-btn next-btn" aria-label="Image suivante">
+            <svg viewBox="0 0 24 24">
+              <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/>
+            </svg>
+          </button>
+        </div>
+      </div>
     </div>
-    <div class="hero-image">
-      <img src="../assets/images/equipement.jpg" alt="Équipements informatiques">
+    
+    <!-- Flèche de défilement -->
+    <div class="scroll-indicator">
+      <span>Découvrir</span>
+      <div class="arrow"></div>
+    </div>
+  </section>
+
+  <!-- Section Marketing -->
+  <section class="marketing-section">
+    <div class="marketing-container">
+      <div class="marketing-card">
+        <div class="marketing-icon">🚚</div>
+        <h3>Livraison Express</h3>
+        <p>Recevez vos commandes en 24-48h partout au Sénégal avec suivi en temps réel.</p>
+      </div>
+      
+      <div class="marketing-card">
+        <div class="marketing-icon">🛡️</div>
+        <h3>Garantie 2 Ans</h3>
+        <p>Tous nos produits bénéficient d'une garantie constructeur étendue de 24 mois.</p>
+      </div>
+      
+      <div class="marketing-card">
+        <div class="marketing-icon">💳</div>
+        <h3>Paiement Sécurisé</h3>
+        <p>Payez en toute sécurité avec Orange Money, Wave, carte bancaire ou à la livraison.</p>
+      </div>
+      
+      <div class="marketing-card">
+        <div class="marketing-icon">🔧</div>
+        <h3>Installation Gratuite</h3>
+        <p>Notre équipe technique vous installe et configure vos équipements sans frais supplémentaires.</p>
+      </div>
     </div>
   </section>
 
   <!-- Produits phares -->
   <section class="produits-phares" id="produits">
-    <h2>Nos produits populaires</h2>
+    <div class="section-intro">
+      <h2>Nos Produits Stars ⭐</h2>
+      <p class="section-subtitle">
+        Découvrez notre sélection coup de cœur : des produits testés et approuvés 
+        par notre communauté de passionnés d'informatique.
+      </p>
+      <div class="categories-filter">
+        <button class="filter-btn active">Tous</button>
+        <button class="filter-btn">Gaming</button>
+        <button class="filter-btn">Bureau</button>
+        <button class="filter-btn">Réseau</button>
+        <button class="filter-btn">Stockage</button>
+      </div>
+    </div>
+    
     <div class="cards">
       <!-- Produit 1 -->
       <div class="card">
+        <div class="card-badge">Best Seller</div>
         <img src="../assets/images/souris.jpg" alt="Souris Gaming">
-        <h3>Souris Gaming</h3>
-        <p>Prix : 5 000 FCFA</p>
-        <button>Ajouter au panier</button>
+        <div class="card-content">
+          <h3>Souris Gaming RGB</h3>
+          <p class="card-description">Précision extrême avec capteur 16000 DPI et rétroéclairage RGB personnalisable</p>
+          <div class="card-price">
+            <span class="current-price">5 000 FCFA</span>
+            <span class="original-price">7 500 FCFA</span>
+            <span class="discount">-33%</span>
+          </div>
+          <div class="card-rating">
+            ⭐⭐⭐⭐⭐ (128 avis)
+          </div>
+          <button class="card-btn">Ajouter au panier</button>
+        </div>
       </div>
+      
       <!-- Produit 2 -->
       <div class="card">
+        <div class="card-badge">Nouveau</div>
         <img src="../assets/images/clavier.jpg" alt="Clavier mécanique">
-        <h3>Clavier Mécanique</h3>
-        <p>Prix : 12 000 FCFA</p>
-        <button>Ajouter au panier</button>
+        <div class="card-content">
+          <h3>Clavier Mécanique Pro</h3>
+          <p class="card-description">Tactile avec switches Cherry MX Brown et éclairage RGB 16,8 millions de couleurs</p>
+          <div class="card-price">
+            <span class="current-price">12 000 FCFA</span>
+          </div>
+          <div class="card-rating">
+            ⭐⭐⭐⭐⭐ (94 avis)
+          </div>
+          <button class="card-btn">Ajouter au panier</button>
+        </div>
       </div>
+      
       <!-- Produit 3 -->
       <div class="card">
         <img src="../assets/images/imprimante.jpg" alt="Imprimante Laser">
-        <h3>Imprimante Laser</h3>
-        <p>Prix : 50 000 FCFA</p>
-        <button>Ajouter au panier</button>
+        <div class="card-content">
+          <h3>Imprimante Laser WiFi</h3>
+          <p class="card-description">Imprimez sans fil jusqu'à 22 pages/min en qualité professionnelle</p>
+          <div class="card-price">
+            <span class="current-price">50 000 FCFA</span>
+            <span class="original-price">65 000 FCFA</span>
+            <span class="discount">-23%</span>
+          </div>
+          <div class="card-rating">
+            ⭐⭐⭐⭐ (67 avis)
+          </div>
+          <button class="card-btn">Ajouter au panier</button>
+        </div>
       </div>
+      
       <!-- Produit 4 -->
       <div class="card">
+        <div class="card-badge">Économique</div>
         <img src="../assets/images/cables.jpg" alt="Câbles à sertir">
-        <h3>Câbles à sertir</h3>
-        <p>Prix : 1 500 FCFA</p>
-        <button>Ajouter au panier</button>
+        <div class="card-content">
+          <h3>Kit Câbles Réseau</h3>
+          <p class="card-description">Pack de 10 câbles Ethernet Cat6 + outil de sertissage professionnel</p>
+          <div class="card-price">
+            <span class="current-price">1 500 FCFA</span>
+          </div>
+          <div class="card-rating">
+            ⭐⭐⭐⭐⭐ (201 avis)
+          </div>
+          <button class="card-btn">Ajouter au panier</button>
+        </div>
       </div>
+      
       <!-- Produit 5 -->
       <div class="card">
+        <div class="card-badge">Promo Flash</div>
         <img src="../assets/images/disque.jpg" alt="Disque dur externe">
-        <h3>Disque Dur Externe 1TB</h3>
-        <p>Prix : 25 000 FCFA</p>
-        <button>Ajouter au panier</button>
+        <div class="card-content">
+          <h3>Disque Dur Externe 2TB</h3>
+          <p class="card-description">Transfert USB 3.0 ultra rapide, compatible avec PC et Mac</p>
+          <div class="card-price">
+            <span class="current-price">25 000 FCFA</span>
+            <span class="original-price">35 000 FCFA</span>
+            <span class="discount">-29%</span>
+          </div>
+          <div class="card-rating">
+            ⭐⭐⭐⭐⭐ (156 avis)
+          </div>
+          <button class="card-btn">Ajouter au panier</button>
+        </div>
       </div>
+      
       <!-- Produit 6 -->
       <div class="card">
         <img src="../assets/images/ecouteurs.jpg" alt="Écouteurs Bluetooth">
-        <h3>Écouteurs Bluetooth</h3>
-        <p>Prix : 8 000 FCFA</p>
-        <button>Ajouter au panier</button>
+        <div class="card-content">
+          <h3>Écouteurs Bluetooth 5.2</h3>
+          <p class="card-description">Audio haute définition avec réduction de bruit active et autonomie 30h</p>
+          <div class="card-price">
+            <span class="current-price">8 000 FCFA</span>
+          </div>
+          <div class="card-rating">
+            ⭐⭐⭐⭐ (89 avis)
+          </div>
+          <button class="card-btn">Ajouter au panier</button>
+        </div>
       </div>
+      
       <!-- Produit 7 -->
       <div class="card">
+        <div class="card-badge">Premium</div>
         <img src="../assets/images/moniteur.jpg" alt="Moniteur 24 pouces">
-        <h3>Moniteur 24 pouces</h3>
-        <p>Prix : 70 000 FCFA</p>
-        <button>Ajouter au panier</button>
+        <div class="card-content">
+          <h3>Moniteur 24" 144Hz</h3>
+          <p class="card-description">Écran IPS Full HD avec temps de réponse 1ms pour le gaming compétitif</p>
+          <div class="card-price">
+            <span class="current-price">70 000 FCFA</span>
+          </div>
+          <div class="card-rating">
+            ⭐⭐⭐⭐⭐ (73 avis)
+          </div>
+          <button class="card-btn">Ajouter au panier</button>
+        </div>
       </div>
+      
       <!-- Produit 8 -->
       <div class="card">
         <img src="../assets/images/webcam.jpg" alt="Webcam Full HD">
-        <h3>Webcam Full HD</h3>
-        <p>Prix : 15 000 FCFA</p>
-        <button>Ajouter au panier</button>
+        <div class="card-content">
+          <h3>Webcam 1080p Auto-Focus</h3>
+          <p class="card-description">Idéale pour visioconférences avec micro intégré et correction lumière</p>
+          <div class="card-price">
+            <span class="current-price">15 000 FCFA</span>
+            <span class="original-price">20 000 FCFA</span>
+            <span class="discount">-25%</span>
+          </div>
+          <div class="card-rating">
+            ⭐⭐⭐⭐ (42 avis)
+          </div>
+          <button class="card-btn">Ajouter au panier</button>
+        </div>
       </div>
-      <!-- Produit 9 -->
-      <div class="card">
-        <img src="../assets/images/microphone.jpg" alt="Microphone USB">
-        <h3>Microphone USB</h3>
-        <p>Prix : 12 500 FCFA</p>
-        <button>Ajouter au panier</button>
-      </div>
-      <!-- Produit 10 -->
-      <div class="card">
-        <img src="../assets/images/routeur.jpg" alt="Routeur WiFi">
-        <h3>Routeur WiFi</h3>
-        <p>Prix : 18 000 FCFA</p>
-        <button>Ajouter au panier</button>
-      </div>
-      <!-- Produit 11 -->
-      <div class="card">
-        <img src="../assets/images/ssd.jpg" alt="SSD 500GB">
-        <h3>SSD 500GB</h3>
-        <p>Prix : 22 000 FCFA</p>
-        <button>Ajouter au panier</button>
-      </div>
-      <!-- Produit 12 -->
-      <div class="card">
-        <img src="../assets/images/hub.jpg" alt="Hub USB 4 ports">
-        <h3>Hub USB 4 ports</h3>
-        <p>Prix : 3 500 FCFA</p>
-        <button>Ajouter au panier</button>
-      </div>
-      <!-- Produit 13 -->
-      <div class="card">
-        <img src="../assets/images/memoire.jpg" alt="Mémoire RAM 8GB">
-        <h3>Mémoire RAM 8GB</h3>
-        <p>Prix : 20 000 FCFA</p>
-        <button>Ajouter au panier</button>
-      </div>
-      <!-- Produit 14 -->
-      <div class="card">
-        <img src="../assets/images/alim.jpg" alt="Alimentation PC 600W">
-        <h3>Alimentation 600W</h3>
-        <p>Prix : 18 500 FCFA</p>
-        <button>Ajouter au panier</button>
-      </div>
-      <!-- Produit 15 -->
-      <div class="card">
-        <img src="../assets/images/boitier.jpg" alt="Boîtier PC">
-        <h3>Boîtier PC</h3>
-        <p>Prix : 25 000 FCFA</p>
-        <button>Ajouter au panier</button>
-      </div>
-      <!-- Produit 16 -->
-      <div class="card">
-        <img src="../assets/images/souris2.jpg" alt="Souris Ergonomique">
-        <h3>Souris Ergonomique</h3>
-        <p>Prix : 6 500 FCFA</p>
-        <button>Ajouter au panier</button>
-      </div>
-      <!-- Produit 17 -->
-      <div class="card">
-        <img src="../assets/images/clavier2.jpg" alt="Clavier sans fil">
-        <h3>Clavier Sans Fil</h3>
-        <p>Prix : 10 000 FCFA</p>
-        <button>Ajouter au panier</button>
-      </div>
-      <!-- Produit 18 -->
-      <div class="card">
-        <img src="../assets/images/ecouteurs2.jpg" alt="Casque Audio">
-        <h3>Casque Audio</h3>
-        <p>Prix : 15 000 FCFA</p>
-        <button>Ajouter au panier</button>
-      </div>
-      <!-- Produit 19 -->
-      <div class="card">
-        <img src="../assets/images/ssd2.jpg" alt="SSD 1TB">
-        <h3>SSD 1TB</h3>
-        <p>Prix : 40 000 FCFA</p>
-        <button>Ajouter au panier</button>
-      </div>
-      <!-- Produit 20 -->
-      <div class="card">
-        <img src="../assets/images/monitor2.jpg" alt="Moniteur 27 pouces">
-        <h3>Moniteur 27 pouces</h3>
-        <p>Prix : 90 000 FCFA</p>
-        <button>Ajouter au panier</button>
+    </div>
+    
+    <div class="section-cta">
+      <p>🎁 <strong>Livraison gratuite</strong> dès 20 000 FCFA d'achat</p>
+      <a href="#" class="view-all-btn">Voir tous les produits →</a>
+    </div>
+  </section>
+
+  <!-- Témoignages -->
+  <section class="testimonials">
+    <div class="testimonials-container">
+      <h2>Ils nous font confiance 🏆</h2>
+      <div class="testimonials-grid">
+        <div class="testimonial-card">
+          <div class="testimonial-header">
+            <img src="https://i.pravatar.cc/150?img=1" alt="Client" class="client-avatar">
+            <div>
+              <h4>Amadou Diop</h4>
+              <span class="client-role">Gamer professionnel</span>
+            </div>
+          </div>
+          <p class="testimonial-text">
+            "Ma commande est arrivée en moins de 24h ! La souris gaming est exceptionnelle, 
+            le service client est réactif. Je recommande à 100% !"
+          </p>
+          <div class="testimonial-rating">⭐⭐⭐⭐⭐</div>
+        </div>
+        
+        <div class="testimonial-card">
+          <div class="testimonial-header">
+            <img src="https://i.pravatar.cc/150?img=2" alt="Client" class="client-avatar">
+            <div>
+              <h4>Fatou Ndiaye</h4>
+              <span class="client-role">Professeure universitaire</span>
+            </div>
+          </div>
+          <p class="testimonial-text">
+            "L'imprimante laser fonctionne parfaitement. L'installation gratuite 
+            a été un vrai plus. Service impeccable et produits de qualité."
+          </p>
+          <div class="testimonial-rating">⭐⭐⭐⭐⭐</div>
+        </div>
+        
+        <div class="testimonial-card">
+          <div class="testimonial-header">
+            <img src="https://i.pravatar.cc/150?img=3" alt="Client" class="client-avatar">
+            <div>
+              <h4>Cheikh Bâ</h4>
+              <span class="client-role">Entrepreneur</span>
+            </div>
+          </div>
+          <p class="testimonial-text">
+            "J'ai équipé tout mon bureau avec leurs produits. Rapport qualité/prix 
+            imbattable et SAV disponible même le weekend. Bravo !"
+          </p>
+          <div class="testimonial-rating">⭐⭐⭐⭐⭐</div>
+        </div>
       </div>
     </div>
   </section>
 
   <!-- Avantages -->
   <section class="avantages">
-    <h2>Pourquoi choisir notre boutique ?</h2>
-    <div class="avantages-list">
-      <div class="avantage">
-        <h3>Produits de qualité</h3>
-        <p>Nous sélectionnons les meilleurs équipements pour nos clients.</p>
+    <div class="avantages-container">
+      <h2>Pourquoi nous choisir ? 🌟</h2>
+      <p class="avantages-subtitle">
+        Nous ne vendons pas que des produits, nous offrons une expérience complète
+      </p>
+      
+      <div class="avantages-grid">
+        <div class="avantage-card">
+          <div class="avantage-icon">🎯</div>
+          <h3>Conseils Experts</h3>
+          <p>Notre équipe vous guide pour choisir l'équipement parfaitement adapté à vos besoins.</p>
+        </div>
+        
+        <div class="avantage-card">
+          <div class="avantage-icon">⚡</div>
+          <h3>Stock Garanti</h3>
+          <p>Tous les produits affichés sont disponibles immédiatement, pas de délais d'attente.</p>
+        </div>
+        
+        <div class="avantage-card">
+          <div class="avantage-icon">🔄</div>
+          <h3>Retour Facile</h3>
+          <p>Vous avez 14 jours pour changer d'avis, retour gratuit et remboursement rapide.</p>
+        </div>
+        
+        <div class="avantage-card">
+          <div class="avantage-icon">📞</div>
+          <h3>Support Technique</h3>
+          <p>Assistance téléphonique et WhatsApp pour dépanner vos équipements 7j/7.</p>
+        </div>
       </div>
-      <div class="avantage">
-        <h3>Livraison rapide</h3>
-        <p>Recevez vos commandes dans les meilleurs délais.</p>
-      </div>
-      <div class="avantage">
-        <h3>Service client réactif</h3>
-        <p>Notre équipe est disponible pour répondre à toutes vos questions.</p>
-      </div>
-      <div class="avantage">
-        <h3>Offres et promotions</h3>
-        <p>Profitez régulièrement de réductions sur nos produits.</p>
+      
+      <div class="avantages-cta">
+        <p>Prêt à équiper votre espace numérique ?</p>
+        <a href="../pages/contact.html" class="cta-btn">Demander un devis personnalisé</a>
       </div>
     </div>
   </section>
@@ -208,6 +440,162 @@
     fetch('../assets/components/footer.html')
       .then(res => res.text())
       .then(data => document.getElementById('footer-placeholder').innerHTML = data);
+  </script>
+
+  <!-- Script pour le carrousel -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      // Initialisation du carrousel
+      const carrousel = {
+        slides: document.querySelectorAll('.carrousel-slide'),
+        indicators: document.querySelectorAll('.indicator'),
+        prevBtn: document.querySelector('.prev-btn'),
+        nextBtn: document.querySelector('.next-btn'),
+        currentIndex: 0,
+        interval: null,
+        
+        init: function() {
+          // Événements pour les boutons
+          this.prevBtn.addEventListener('click', () => this.prevSlide());
+          this.nextBtn.addEventListener('click', () => this.nextSlide());
+          
+          // Événements pour les indicateurs
+          this.indicators.forEach((indicator, index) => {
+            indicator.addEventListener('click', () => this.goToSlide(index));
+          });
+          
+          // Démarre le carrousel automatique
+          this.startAutoPlay();
+          
+          // Pause au survol
+          document.querySelector('.hero-carrousel').addEventListener('mouseenter', () => {
+            this.stopAutoPlay();
+          });
+          
+          document.querySelector('.hero-carrousel').addEventListener('mouseleave', () => {
+            this.startAutoPlay();
+          });
+          
+          // Animation d'entrée
+          this.animateHero();
+          
+          // Filtres produits
+          this.initFilters();
+        },
+        
+        goToSlide: function(index) {
+          // Retire les classes actives
+          this.slides.forEach(slide => slide.classList.remove('active'));
+          this.indicators.forEach(indicator => indicator.classList.remove('active'));
+          
+          // Ajoute les classes actives
+          this.slides[index].classList.add('active');
+          this.indicators[index].classList.add('active');
+          
+          this.currentIndex = index;
+        },
+        
+        nextSlide: function() {
+          let nextIndex = (this.currentIndex + 1) % this.slides.length;
+          this.goToSlide(nextIndex);
+        },
+        
+        prevSlide: function() {
+          let prevIndex = this.currentIndex === 0 ? this.slides.length - 1 : this.currentIndex - 1;
+          this.goToSlide(prevIndex);
+        },
+        
+        startAutoPlay: function() {
+          this.stopAutoPlay();
+          this.interval = setInterval(() => this.nextSlide(), 5000);
+        },
+        
+        stopAutoPlay: function() {
+          if (this.interval) {
+            clearInterval(this.interval);
+          }
+        },
+        
+        animateHero: function() {
+          // Animation du texte
+          const heroContent = document.querySelector('.hero-content');
+          heroContent.style.opacity = '0';
+          heroContent.style.transform = 'translateX(-20px)';
+          
+          setTimeout(() => {
+            heroContent.style.transition = 'all 0.8s cubic-bezier(0.4, 0, 0.2, 1)';
+            heroContent.style.opacity = '1';
+            heroContent.style.transform = 'translateX(0)';
+          }, 300);
+          
+          // Animation du carrousel
+          const carrouselContainer = document.querySelector('.carrousel-container');
+          carrouselContainer.style.opacity = '0';
+          carrouselContainer.style.transform = 'translateX(20px)';
+          
+          setTimeout(() => {
+            carrouselContainer.style.transition = 'all 0.8s cubic-bezier(0.4, 0, 0.2, 1) 0.2s';
+            carrouselContainer.style.opacity = '1';
+            carrouselContainer.style.transform = 'translateX(0)';
+          }, 500);
+        },
+        
+        initFilters: function() {
+          const filterBtns = document.querySelectorAll('.filter-btn');
+          const cards = document.querySelectorAll('.card');
+          
+          filterBtns.forEach(btn => {
+            btn.addEventListener('click', function() {
+              // Retire la classe active de tous les boutons
+              filterBtns.forEach(b => b.classList.remove('active'));
+              // Ajoute la classe active au bouton cliqué
+              this.classList.add('active');
+              
+              const filter = this.textContent.toLowerCase();
+              
+              // Filtre les cartes
+              cards.forEach(card => {
+                if (filter === 'tous') {
+                  card.style.display = 'block';
+                } else {
+                  const cardTitle = card.querySelector('h3').textContent.toLowerCase();
+                  if (cardTitle.includes(filter)) {
+                    card.style.display = 'block';
+                  } else {
+                    card.style.display = 'none';
+                  }
+                }
+              });
+            });
+          });
+        }
+      };
+      
+      // Initialise le carrousel
+      carrousel.init();
+      
+      // Animation des cartes produits
+      const cards = document.querySelectorAll('.card');
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.style.animationPlayState = 'running';
+          }
+        });
+      }, { threshold: 0.1 });
+      
+      cards.forEach(card => observer.observe(card));
+      
+      // Animation au scroll
+      const scrollIndicator = document.querySelector('.scroll-indicator');
+      window.addEventListener('scroll', () => {
+        if (window.scrollY > 100) {
+          scrollIndicator.style.opacity = '0';
+        } else {
+          scrollIndicator.style.opacity = '1';
+        }
+      });
+    });
   </script>
 
 </body>

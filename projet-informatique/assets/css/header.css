@@ -1,98 +1,401 @@
 /* =========================
-   Header principal
+   Header principal - Version améliorée
 ========================= */
 .site-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 15px 40px;
-  background-color: #ffffff; /* Fond blanc */
-  color: #1a4d8f; /* Texte bleu */
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-  font-family: Arial, sans-serif;
-  position: fixed; /* Fixe en haut */
+  padding: 0.75rem 2.5rem;
+  background-color: rgba(255, 255, 255, 0.98);
+  color: #1a4d8f;
+  box-shadow: 0 4px 20px rgba(26, 77, 143, 0.1);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   z-index: 1000;
+  backdrop-filter: blur(10px);
+  transition: all 0.3s ease;
+  border-bottom: 1px solid rgba(26, 77, 143, 0.1);
 }
 
-/* Logo */
+/* Logo avec version abrégée pour mobile */
+.site-header .logo {
+  flex: 0 0 auto;
+  margin-right: 1.5rem;
+  transition: all 0.3s ease;
+}
+
 .site-header .logo h1 {
-  font-size: 1.8rem;
+  font-size: 1.5rem;
   margin: 0;
   color: #1a4d8f;
   text-transform: uppercase;
-  letter-spacing: 1px;
+  letter-spacing: 1.2px;
+  font-weight: 700;
+  background: linear-gradient(90deg, #1a4d8f, #3a6fb0);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+  overflow: hidden;
 }
 
-/* Menu horizontal */
+.site-header .logo h1:hover {
+  transform: scale(1.03);
+}
+
+/* Version complète du logo (par défaut) */
+.site-header .logo h1 .full-text {
+  display: inline;
+}
+
+.site-header .logo h1 .short-text {
+  display: none;
+}
+
+/* Menu horizontal amélioré */
+.site-header .menu {
+  flex: 1 1 auto;
+  display: flex;
+  justify-content: flex-start;
+  margin-left: 0;
+  min-width: 0;
+}
+
 .site-header .menu ul {
   list-style: none;
   display: flex;
-  gap: 25px;
+  gap: 1.5rem;
   margin: 0;
   padding: 0;
   align-items: center;
+  flex-wrap: nowrap;
 }
 
 /* Liens du menu */
 .site-header .menu ul li a {
   text-decoration: none;
   color: #1a4d8f;
-  font-weight: bold;
-  padding: 8px 12px;
-  border-radius: 5px;
-  transition: background 0.3s, transform 0.2s;
+  font-weight: 600;
+  padding: 0.6rem 0.9rem;
+  border-radius: 8px;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+  display: inline-block;
+  font-size: 0.95rem;
+  white-space: nowrap;
+  flex-shrink: 0;
 }
 
-.site-header .menu ul li a:hover {
-  background-color: #e6f0ff; /* Bleu très clair au survol */
+.site-header .menu ul li a:not(.btn-login)::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(90deg, #1a4d8f, #3a6fb0);
+  transition: all 0.3s ease;
+  transform: translateX(-50%);
+}
+
+.site-header .menu ul li a:not(.btn-login):hover::after {
+  width: 80%;
+}
+
+.site-header .menu ul li a:not(.btn-login):hover {
+  color: #3a6fb0;
+  background-color: rgba(26, 77, 143, 0.05);
   transform: translateY(-2px);
 }
 
 /* Bouton Se connecter */
+.site-header .menu ul li:last-child {
+  margin-left: auto;
+}
+
 .site-header .menu ul li a.btn-login {
-  background-color: #1a4d8f;
+  background: linear-gradient(135deg, #1a4d8f 0%, #3a6fb0 100%);
   color: #ffffff;
-  padding: 8px 18px;
-  font-weight: bold;
-  border-radius: 5px;
-  transition: background 0.3s, transform 0.2s;
+  padding: 0.65rem 1.5rem;
+  font-weight: 600;
+  border-radius: 10px;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 4px 12px rgba(26, 77, 143, 0.25);
+  border: 2px solid transparent;
+  position: relative;
+  overflow: hidden;
+  font-size: 0.95rem;
+  margin-left: 1rem;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.site-header .menu ul li a.btn-login::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: left 0.7s ease;
+}
+
+.site-header .menu ul li a.btn-login:hover::before {
+  left: 100%;
 }
 
 .site-header .menu ul li a.btn-login:hover {
-  background-color: #3a6fb0;
-  transform: translateY(-2px);
+  background: linear-gradient(135deg, #3a6fb0 0%, #1a4d8f 100%);
+  transform: translateY(-2px) scale(1.04);
+  box-shadow: 0 6px 16px rgba(26, 77, 143, 0.35);
+  border-color: rgba(255, 255, 255, 0.3);
 }
 
-/* Pour ne pas que le contenu soit caché derrière le header */
+.site-header .menu ul li a.btn-login:active {
+  transform: translateY(-1px) scale(1.02);
+}
+
+/* Indicateur de page active */
+.site-header .menu ul li a[href*="accueil.html"]:not(.btn-login),
+.site-header .menu ul li a[href*="about.html"]:not(.btn-login),
+.site-header .menu ul li a[href*="contact.html"]:not(.btn-login),
+.site-header .menu ul li a[href*="#produits"]:not(.btn-login) {
+  font-weight: 700;
+}
+
+/* Ajustement du contenu pour le header fixe */
 body {
-  padding-top: 80px; /* Ajuste selon la hauteur de ton header */
+  padding-top: 75px;
+  margin: 0;
+  min-height: 100vh;
+  background-color: #f8fafc;
 }
 
 /* =========================
-   Responsive Header
+   Responsive Header - Logo "BI" sur mobile
 ========================= */
+@media (max-width: 1024px) {
+  .site-header {
+    padding: 0.75rem 1.5rem;
+  }
+  
+  .site-header .logo h1 {
+    font-size: 1.4rem;
+  }
+  
+  .site-header .menu ul {
+    gap: 1rem;
+  }
+  
+  .site-header .menu ul li a {
+    padding: 0.5rem 0.7rem;
+    font-size: 0.9rem;
+  }
+  
+  .site-header .menu ul li a.btn-login {
+    padding: 0.6rem 1.2rem;
+    margin-left: 0.5rem;
+  }
+}
+
 @media (max-width: 768px) {
   .site-header {
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 15px 20px;
-  }
-
-  .site-header .menu ul {
-    flex-direction: column;
-    gap: 10px;
-    width: 100%;
-  }
-
-  .site-header .menu ul li a {
-    width: 100%;
-    text-align: center;
+    padding: 0.5rem 1rem;
   }
 
   .site-header .logo {
-    margin-bottom: 10px;
+    margin-right: 0.8rem;
+    flex-shrink: 0;
   }
+
+  /* Passage à "BI" sur tablette */
+  .site-header .logo h1 .full-text {
+    display: none;
+  }
+  
+  .site-header .logo h1 .short-text {
+    display: inline;
+    font-size: 1.3rem;
+    letter-spacing: 2px;
+  }
+
+  .site-header .menu {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    flex: 1;
+    min-width: 0;
+  }
+
+  .site-header .menu ul {
+    gap: 0.5rem;
+    padding: 0.3rem 0.5rem;
+  }
+
+  .site-header .menu ul li a {
+    padding: 0.5rem 0.8rem;
+    font-size: 0.85rem;
+  }
+
+  .site-header .menu ul li a.btn-login {
+    padding: 0.55rem 1rem;
+    font-size: 0.85rem;
+    margin-left: 0.2rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .site-header {
+    padding: 0.4rem 0.8rem;
+  }
+  
+  .site-header .logo {
+    margin-right: 0.6rem;
+  }
+  
+  .site-header .logo h1 .short-text {
+    font-size: 1.2rem;
+    letter-spacing: 1.8px;
+  }
+  
+  .site-header .menu ul {
+    gap: 0.4rem;
+  }
+  
+  .site-header .menu ul li a {
+    padding: 0.45rem 0.7rem;
+    font-size: 0.82rem;
+  }
+  
+  .site-header .menu ul li a.btn-login {
+    padding: 0.5rem 0.9rem;
+    font-size: 0.82rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .site-header {
+    padding: 0.3rem 0.6rem;
+  }
+  
+  .site-header .logo {
+    margin-right: 0.5rem;
+  }
+  
+  .site-header .logo h1 .short-text {
+    font-size: 1.1rem;
+    letter-spacing: 1.5px;
+  }
+  
+  body {
+    padding-top: 60px;
+  }
+  
+  .site-header .menu ul {
+    gap: 0.3rem;
+  }
+  
+  .site-header .menu ul li a {
+    padding: 0.4rem 0.6rem;
+    font-size: 0.78rem;
+  }
+  
+  .site-header .menu ul li a.btn-login {
+    padding: 0.45rem 0.8rem;
+    font-size: 0.78rem;
+  }
+}
+
+/* Pour les très petits écrans (moins de 360px) */
+@media (max-width: 360px) {
+  .site-header {
+    padding: 0.25rem 0.4rem;
+  }
+  
+  .site-header .logo {
+    margin-right: 0.4rem;
+  }
+  
+  .site-header .logo h1 .short-text {
+    font-size: 1rem;
+    letter-spacing: 1.2px;
+  }
+  
+  .site-header .menu ul {
+    gap: 0.2rem;
+  }
+  
+  .site-header .menu ul li a {
+    padding: 0.35rem 0.5rem;
+    font-size: 0.75rem;
+  }
+  
+  .site-header .menu ul li a.btn-login {
+    padding: 0.4rem 0.7rem;
+    font-size: 0.75rem;
+  }
+}
+
+/* Animation d'entrée du header */
+@keyframes slideDown {
+  from {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.site-header {
+  animation: slideDown 0.5s ease-out;
+}
+
+/* Style pour la barre de défilement */
+.site-header .menu::-webkit-scrollbar {
+  height: 3px;
+}
+
+.site-header .menu::-webkit-scrollbar-track {
+  background: rgba(26, 77, 143, 0.05);
+  border-radius: 10px;
+}
+
+.site-header .menu::-webkit-scrollbar-thumb {
+  background: rgba(26, 77, 143, 0.15);
+  border-radius: 10px;
+}
+
+.site-header .menu::-webkit-scrollbar-thumb:hover {
+  background: rgba(26, 77, 143, 0.25);
+}
+
+/* For Firefox */
+.site-header .menu {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(26, 77, 143, 0.15) rgba(26, 77, 143, 0.05);
+}
+
+/* Masquer la barre de défilement par défaut */
+.site-header .menu {
+  scrollbar-width: none;
+}
+
+.site-header .menu::-webkit-scrollbar {
+  display: none;
+}
+
+/* Afficher la barre au survol */
+.site-header .menu:hover::-webkit-scrollbar {
+  display: block;
+}
+
+.site-header .menu:hover {
+  scrollbar-width: thin;
 }

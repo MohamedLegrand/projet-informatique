@@ -20,44 +20,260 @@
       .then(data => document.getElementById('header-placeholder').innerHTML = data);
   </script>
 
-  <!-- Section À propos -->
+  <!-- Hero Section À propos -->
   <section class="about-hero">
-    <div class="about-text animate-fade">
-      <h1>À propos de notre site</h1>
-      <p>
-        Boutique Informatique a été développé par les élèves de la classe de Première Scientifiques 
-        au Lycée Bilingue d'Ekounou. Notre objectif est de fournir une plateforme conviviale pour 
-        découvrir et acheter facilement des équipements informatiques de qualité.
-      </p>
-      <p>
-        Nous avons mis l'accent sur une interface claire, des informations précises sur les produits, 
-        et une expérience utilisateur agréable pour tous les visiteurs.
-      </p>
+    <div class="hero-bg"></div>
+    <div class="hero-container">
+      <div class="hero-text" data-aos="fade-right" data-aos-duration="800">
+        <h1 class="hero-title">
+          <span class="title-line">Notre Histoire</span>
+          <span class="title-highlight">D'une idée à la réalité</span>
+        </h1>
+        
+        <p class="hero-description">
+          Créé par les élèves passionnés de la classe de Première Scientifiques du 
+          <strong>Lycée Bilingue d'Ekounou</strong>, Boutique Informatique est bien plus 
+          qu'un simple site web. C'est le fruit d'un projet pédagogique ambitieux 
+          combinant technologie, entrepreneuriat et innovation.
+        </p>
+        
+        <div class="hero-stats">
+          <div class="stat">
+            <span class="stat-number">6</span>
+            <span class="stat-label">Mois de développement</span>
+          </div>
+          <div class="stat">
+            <span class="stat-number">15+</span>
+            <span class="stat-label">Élèves impliqués</span>
+          </div>
+          <div class="stat">
+            <span class="stat-number">1000+</span>
+            <span class="stat-label">Lignes de code</span>
+          </div>
+        </div>
+      </div>
+      
+      <div class="hero-image" data-aos="fade-left" data-aos-duration="800" data-aos-delay="200">
+        <div class="image-frame">
+          <img src="../assets/images/equipe.jpg" alt="Équipe de développement" class="main-image">
+          <div class="image-overlay">
+            <div class="overlay-text">
+              <span class="badge">Projet Éducatif</span>
+              <p>Promotion 2023-2024</p>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-    <div class="about-image animate-fade">
-      <img src="../assets/images/equipe.jpg" alt="Équipe de développement">
+    
+    <!-- Élément décoratif -->
+    <div class="hero-decoration">
+      <div class="decoration-circle"></div>
+      <div class="decoration-circle"></div>
     </div>
   </section>
 
-  <!-- Section Objectifs -->
-  <section class="about-objectives">
-    <h2 class="animate-fade">Nos objectifs</h2>
-    <div class="objectives-list">
-      <div class="objective animate-fade">
-        <h3>Expérience utilisateur</h3>
-        <p>Créer un site intuitif et facile à naviguer pour tous les utilisateurs.</p>
+  <!-- Notre Vision -->
+  <section class="vision-section">
+    <div class="section-container">
+      <div class="section-header" data-aos="fade-up">
+        <h2>Notre Vision & Mission</h2>
+        <p class="section-subtitle">
+          Transformer l'apprentissage en expérience concrète et impactante
+        </p>
       </div>
-      <div class="objective animate-fade">
-        <h3>Produits de qualité</h3>
-        <p>Proposer uniquement des produits fiables et testés pour nos clients.</p>
+      
+      <div class="vision-content">
+        <div class="vision-card" data-aos="zoom-in" data-aos-delay="100">
+          <div class="vision-icon">🎓</div>
+          <h3>Pédagogie Innovante</h3>
+          <p>Intégrer les technologies web modernes dans notre parcours éducatif pour préparer la nouvelle génération aux défis numériques.</p>
+        </div>
+        
+        <div class="vision-card" data-aos="zoom-in" data-aos-delay="200">
+          <div class="vision-icon">💻</div>
+          <h3>Expertise Technique</h3>
+          <p>Développer des compétences pratiques en HTML, CSS, JavaScript et design UX/UI à travers un projet réel.</p>
+        </div>
+        
+        <div class="vision-card" data-aos="zoom-in" data-aos-delay="300">
+          <div class="vision-icon">🤝</div>
+          <h3>Collaboration</h3>
+          <p>Travailler en équipe pour créer une solution complète, de la conception au déploiement final.</p>
+        </div>
       </div>
-      <div class="objective animate-fade">
-        <h3>Support rapide</h3>
-        <p>Répondre rapidement à toutes les demandes et questions de nos visiteurs.</p>
+    </div>
+  </section>
+
+  <!-- Nos Objectifs -->
+  <section class="objectives-section">
+    <div class="section-container">
+      <div class="section-header" data-aos="fade-up">
+        <h2>Nos Objectifs Pédagogiques</h2>
+        <p class="section-subtitle">
+          Ce que nous avons appris à travers ce projet
+        </p>
       </div>
-      <div class="objective animate-fade">
-        <h3>Innovation</h3>
-        <p>Améliorer constamment le site avec de nouvelles fonctionnalités et designs.</p>
+      
+      <div class="objectives-grid">
+        <div class="objective-card" data-aos="fade-up" data-aos-delay="100">
+          <div class="objective-number">01</div>
+          <div class="objective-content">
+            <h3>Développement Web Complet</h3>
+            <p>Maîtriser les technologies front-end pour créer des interfaces utilisateur modernes et responsive.</p>
+            <ul class="objective-list">
+              <li>HTML5 sémantique</li>
+              <li>CSS3 avancé avec Flexbox/Grid</li>
+              <li>JavaScript interactif</li>
+            </ul>
+          </div>
+        </div>
+        
+        <div class="objective-card" data-aos="fade-up" data-aos-delay="200">
+          <div class="objective-number">02</div>
+          <div class="objective-content">
+            <h3>Expérience Utilisateur</h3>
+            <p>Concevoir des parcours utilisateur intuitifs et accessibles pour tous types de visiteurs.</p>
+            <ul class="objective-list">
+              <li>Design responsive</li>
+              <li>Accessibilité web</li>
+              <li>Performance d'affichage</li>
+            </ul>
+          </div>
+        </div>
+        
+        <div class="objective-card" data-aos="fade-up" data-aos-delay="300">
+          <div class="objective-number">03</div>
+          <div class="objective-content">
+            <h3>Gestion de Projet</h3>
+            <p>Organiser et planifier un projet web de A à Z en respectant les délais et objectifs fixés.</p>
+            <ul class="objective-list">
+              <li>Planification agile</li>
+              <li>Collaboration en équipe</li>
+              <li>Versionning avec Git</li>
+            </ul>
+          </div>
+        </div>
+        
+        <div class="objective-card" data-aos="fade-up" data-aos-delay="400">
+          <div class="objective-number">04</div>
+          <div class="objective-content">
+            <h3>Entrepreneuriat Digital</h3>
+            <p>Comprendre les enjeux du e-commerce et créer une plateforme commerciale viable.</p>
+            <ul class="objective-list">
+              <li>Stratégie e-commerce</li>
+              <li>Marketing digital</li>
+              <li>Analyse de marché</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Équipe -->
+  <section class="team-section">
+    <div class="section-container">
+      <div class="section-header" data-aos="fade-up">
+        <h2>Notre Équipe Pédagogique</h2>
+        <p class="section-subtitle">
+          Les encadrants et professeurs qui nous ont guidés
+        </p>
+      </div>
+      
+      <div class="team-grid">
+        <div class="team-member" data-aos="flip-left" data-aos-delay="100">
+          <div class="member-image">
+            <img src="https://i.pravatar.cc/150?img=8" alt="Professeur encadrant">
+          </div>
+          <div class="member-info">
+            <h3>Prof. Jean Ndong</h3>
+            <p class="member-role">Encadrant Informatique</p>
+            <p class="member-bio">Enseignant en sciences informatiques avec 15 ans d'expérience en développement web.</p>
+          </div>
+        </div>
+        
+        <div class="team-member" data-aos="flip-left" data-aos-delay="200">
+          <div class="member-image">
+            <img src="https://i.pravatar.cc/150?img=11" alt="Professeur encadrant">
+          </div>
+          <div class="member-info">
+            <h3>Prof. Marie Diallo</h3>
+            <p class="member-role">Mentor Pédagogique</p>
+            <p class="member-bio">Spécialiste en pédagogie innovante et intégration des TIC dans l'enseignement.</p>
+          </div>
+        </div>
+        
+        <div class="team-member" data-aos="flip-left" data-aos-delay="300">
+          <div class="member-image">
+            <img src="https://i.pravatar.cc/150?img=47" alt="Intervenant expert">
+          </div>
+          <div class="member-info">
+            <h3>M. Omar Sy</h3>
+            <p class="member-role">Expert Web</p>
+            <p class="member-bio">Développeur full-stack intervenant pour partager son expertise professionnelle.</p>
+          </div>
+        </div>
+      </div>
+      
+      <div class="team-cta" data-aos="fade-up" data-aos-delay="400">
+        <h3>Rejoignez notre aventure !</h3>
+        <p>Vous êtes un établissement scolaire intéressé par un projet similaire ? Contactez-nous !</p>
+        <a href="../pages/contact.html" class="cta-button">Nous contacter</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Timeline du projet -->
+  <section class="timeline-section">
+    <div class="section-container">
+      <div class="section-header" data-aos="fade-up">
+        <h2>Notre Parcours</h2>
+        <p class="section-subtitle">
+          Chronologie de développement du projet
+        </p>
+      </div>
+      
+      <div class="timeline">
+        <div class="timeline-item" data-aos="fade-right">
+          <div class="timeline-date">Septembre 2023</div>
+          <div class="timeline-content">
+            <h3>Idéation & Conception</h3>
+            <p>Brainstorming, recherche de marché et conception des premières maquettes du site.</p>
+          </div>
+        </div>
+        
+        <div class="timeline-item" data-aos="fade-left">
+          <div class="timeline-date">Octobre-Novembre 2023</div>
+          <div class="timeline-content">
+            <h3>Développement Front-end</h3>
+            <p>Création de la structure HTML et mise en place du design CSS responsive.</p>
+          </div>
+        </div>
+        
+        <div class="timeline-item" data-aos="fade-right">
+          <div class="timeline-date">Décembre 2023</div>
+          <div class="timeline-content">
+            <h3>Interactivité JavaScript</h3>
+            <p>Ajout des fonctionnalités interactives et animations pour améliorer l'expérience utilisateur.</p>
+          </div>
+        </div>
+        
+        <div class="timeline-item" data-aos="fade-left">
+          <div class="timeline-date">Janvier 2024</div>
+          <div class="timeline-content">
+            <h3>Tests & Optimisations</h3>
+            <p>Tests utilisateurs, corrections de bugs et optimisation des performances.</p>
+          </div>
+        </div>
+        
+        <div class="timeline-item" data-aos="fade-right">
+          <div class="timeline-date">Février 2024</div>
+          <div class="timeline-content">
+            <h3>Lancement & Présentation</h3>
+            <p>Déploiement final du site et présentation du projet devant l'établissement.</p>
+          </div>
+        </div>
       </div>
     </div>
   </section>
@@ -68,6 +284,19 @@
     fetch('../assets/components/footer.html')
       .then(res => res.text())
       .then(data => document.getElementById('footer-placeholder').innerHTML = data);
+  </script>
+
+  <!-- AOS Library for Animations -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      AOS.init({
+        duration: 800,
+        once: true,
+        offset: 100
+      });
+    });
   </script>
 
 </body>
