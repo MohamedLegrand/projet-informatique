@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Boutique Informatique - Accueil</title>
+  
+  <!-- Styles globaux -->
+  <link rel="stylesheet" href="../assets/css/header.css">
+  <link rel="stylesheet" href="../assets/css/footer.css">
+  <link rel="stylesheet" href="../assets/css/accueil.css">
+</head>
+<body>
+
+  <!-- Header réutilisable -->
+  <div id="header-placeholder"></div>
+  <script>
+    fetch('../assets/components/header.html')
+      .then(res => res.text())
+      .then(data => document.getElementById('header-placeholder').innerHTML = data);
+  </script>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-text">
+      <h1>Bienvenue chez Boutique Informatique</h1>
+      <p>Découvrez nos équipements informatiques : machines, câbles, souris, imprimantes et bien plus.</p>
+      <a href="#produits" class="btn-hero">Découvrir nos produits</a>
+    </div>
+    <div class="hero-image">
+      <img src="../assets/images/equipement.jpg" alt="Équipements informatiques">
+    </div>
+  </section>
+
+  <!-- Produits phares -->
+  <section class="produits-phares" id="produits">
+    <h2>Nos produits populaires</h2>
+    <div class="cards">
+      <!-- Produit 1 -->
+      <div class="card">
+        <img src="../assets/images/souris.jpg" alt="Souris Gaming">
+        <h3>Souris Gaming</h3>
+        <p>Prix : 5 000 FCFA</p>
+        <button>Ajouter au panier</button>
+      </div>
+      <!-- Produit 2 -->
+      <div class="card">
+        <img src="../assets/images/clavier.jpg" alt="Clavier mécanique">
+        <h3>Clavier Mécanique</h3>
+        <p>Prix : 12 000 FCFA</p>
+        <button>Ajouter au panier</button>
+      </div>
+      <!-- Produit 3 -->
+      <div class="card">
+        <img src="../assets/images/imprimante.jpg" alt="Imprimante Laser">
+        <h3>Imprimante Laser</h3>
+        <p>Prix : 50 000 FCFA</p>
+        <button>Ajouter au panier</button>
+      </div>
+      <!-- Produit 4 -->
+      <div class="card">
+        <img src="../assets/images/cables.jpg" alt="Câbles à sertir">
+        <h3>Câbles à sertir</h3>
+        <p>Prix : 1 500 FCFA</p>
+        <button>Ajouter au panier</button>
+      </div>
+      <!-- Produit 5 -->
+      <div class="card">
+        <img src="../assets/images/disque.jpg" alt="Disque dur externe">
+        <h3>Disque Dur Externe 1TB</h3>
+        <p>Prix : 25 000 FCFA</p>
+        <button>Ajouter au panier</button>
+      </div>
+      <!-- Produit 6 -->
+      <div class="card">
+        <img src="../assets/images/ecouteurs.jpg" alt="Écouteurs Bluetooth">
+        <h3>Écouteurs Bluetooth</h3>
+        <p>Prix : 8 000 FCFA</p>
+        <button>Ajouter au panier</button>
+      </div>
+      <!-- Produit 7 -->
+      <div class="card">
+        <img src="../assets/images/moniteur.jpg" alt="Moniteur 24 pouces">
+        <h3>Moniteur 24 pouces</h3>
+        <p>Prix : 70 000 FCFA</p>
+        <button>Ajouter au panier</button>
+      </div>
+      <!-- Produit 8 -->
+      <div class="card">
+        <img src="../assets/images/webcam.jpg" alt="Webcam Full HD">
+        <h3>Webcam Full HD</h3>
+        <p>Prix : 15 000 FCFA</p>
+        <button>Ajouter au panier</button>
+      </div>
+      <!-- Produit 9 -->
+      <div class="card">
+        <img src="../assets/images/microphone.jpg" alt="Microphone USB">
+        <h3>Microphone USB</h3>
+        <p>Prix : 12 500 FCFA</p>
+        <button>Ajouter au panier</button>
+      </div>
+      <!-- Produit 10 -->
+      <div class="card">
+        <img src="../assets/images/routeur.jpg" alt="Routeur WiFi">
+        <h3>Routeur WiFi</h3>
+        <p>Prix : 18 000 FCFA</p>
+        <button>Ajouter au panier</button>
+      </div>
+      <!-- Produit 11 -->
+      <div class="card">
+        <img src="../assets/images/ssd.jpg" alt="SSD 500GB">
+        <h3>SSD 500GB</h3>
+        <p>Prix : 22 000 FCFA</p>
+        <button>Ajouter au panier</button>
+      </div>
+      <!-- Produit 12 -->
+      <div class="card">
+        <img src="../assets/images/hub.jpg" alt="Hub USB 4 ports">
+        <h3>Hub USB 4 ports</h3>
+        <p>Prix : 3 500 FCFA</p>
+        <button>Ajouter au panier</button>
+      </div>
+      <!-- Produit 13 -->
+      <div class="card">
+        <img src="../assets/images/memoire.jpg" alt="Mémoire RAM 8GB">
+        <h3>Mémoire RAM 8GB</h3>
+        <p>Prix : 20 000 FCFA</p>
+        <button>Ajouter au panier</button>
+      </div>
+      <!-- Produit 14 -->
+      <div class="card">
+        <img src="../assets/images/alim.jpg" alt="Alimentation PC 600W">
+        <h3>Alimentation 600W</h3>
+        <p>Prix : 18 500 FCFA</p>
+        <button>Ajouter au panier</button>
+      </div>
+      <!-- Produit 15 -->
+      <div class="card">
+        <img src="../assets/images/boitier.jpg" alt="Boîtier PC">
+        <h3>Boîtier PC</h3>
+        <p>Prix : 25 000 FCFA</p>
+        <button>Ajouter au panier</button>
+      </div>
+      <!-- Produit 16 -->
+      <div class="card">
+        <img src="../assets/images/souris2.jpg" alt="Souris Ergonomique">
+        <h3>Souris Ergonomique</h3>
+        <p>Prix : 6 500 FCFA</p>
+        <button>Ajouter au panier</button>
+      </div>
+      <!-- Produit 17 -->
+      <div class="card">
+        <img src="../assets/images/clavier2.jpg" alt="Clavier sans fil">
+        <h3>Clavier Sans Fil</h3>
+        <p>Prix : 10 000 FCFA</p>
+        <button>Ajouter au panier</button>
+      </div>
+      <!-- Produit 18 -->
+      <div class="card">
+        <img src="../assets/images/ecouteurs2.jpg" alt="Casque Audio">
+        <h3>Casque Audio</h3>
+        <p>Prix : 15 000 FCFA</p>
+        <button>Ajouter au panier</button>
+      </div>
+      <!-- Produit 19 -->
+      <div class="card">
+        <img src="../assets/images/ssd2.jpg" alt="SSD 1TB">
+        <h3>SSD 1TB</h3>
+        <p>Prix : 40 000 FCFA</p>
+        <button>Ajouter au panier</button>
+      </div>
+      <!-- Produit 20 -->
+      <div class="card">
+        <img src="../assets/images/monitor2.jpg" alt="Moniteur 27 pouces">
+        <h3>Moniteur 27 pouces</h3>
+        <p>Prix : 90 000 FCFA</p>
+        <button>Ajouter au panier</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Avantages -->
+  <section class="avantages">
+    <h2>Pourquoi choisir notre boutique ?</h2>
+    <div class="avantages-list">
+      <div class="avantage">
+        <h3>Produits de qualité</h3>
+        <p>Nous sélectionnons les meilleurs équipements pour nos clients.</p>
+      </div>
+      <div class="avantage">
+        <h3>Livraison rapide</h3>
+        <p>Recevez vos commandes dans les meilleurs délais.</p>
+      </div>
+      <div class="avantage">
+        <h3>Service client réactif</h3>
+        <p>Notre équipe est disponible pour répondre à toutes vos questions.</p>
+      </div>
+      <div class="avantage">
+        <h3>Offres et promotions</h3>
+        <p>Profitez régulièrement de réductions sur nos produits.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer réutilisable -->
+  <div id="footer-placeholder"></div>
+  <script>
+    fetch('../assets/components/footer.html')
+      .then(res => res.text())
+      .then(data => document.getElementById('footer-placeholder').innerHTML = data);
+  </script>
+
+</body>
+</html>

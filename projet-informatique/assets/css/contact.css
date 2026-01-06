@@ -1,0 +1,102 @@
+/* =========================
+   Section Contact Hero
+========================= */
+.contact-hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 80px 40px 40px 40px;
+  gap: 40px;
+  background-color: #ffffff;
+  color: #1a4d8f;
+  font-family: Arial, sans-serif;
+}
+
+.contact-text {
+  flex: 1;
+}
+
+.contact-text h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.contact-text p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+/* Formulaire */
+.contact-form {
+  flex: 1;
+}
+
+.contact-form form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.contact-form label {
+  font-weight: bold;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 10px;
+  border: 2px solid #1a4d8f;
+  border-radius: 5px;
+  font-size: 1rem;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: #4da3ff;
+  box-shadow: 0 0 5px rgba(77,163,255,0.5);
+  outline: none;
+}
+
+.contact-form button {
+  background-color: #1a4d8f;
+  color: #ffffff;
+  border: none;
+  padding: 12px;
+  border-radius: 5px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.contact-form button:hover {
+  background-color: #4da3ff;
+  transform: translateY(-3px);
+}
+
+/* =========================
+   Animations douces
+========================= */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade {
+  animation: fadeInUp 1s ease forwards;
+}
+
+/* =========================
+   Responsive
+========================= */
+@media (max-width: 768px) {
+  .contact-hero {
+    flex-direction: column;
+  }
+}

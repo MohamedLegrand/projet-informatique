@@ -1,0 +1,126 @@
+/* =========================
+   Section About Hero
+========================= */
+.about-hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 80px 40px 40px 40px;
+  gap: 30px;
+  background-color: #ffffff;
+  color: #1a4d8f;
+}
+
+.about-hero .about-text {
+  flex: 1;
+  font-family: Arial, sans-serif;
+}
+
+.about-hero .about-text h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.about-hero .about-text p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+.about-hero .about-image {
+  flex: 1;
+  text-align: center;
+}
+
+.about-hero .about-image img {
+  max-width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 8px 15px rgba(0,0,0,0.2);
+  transition: transform 0.3s;
+}
+
+.about-hero .about-image img:hover {
+  transform: scale(1.05);
+}
+
+/* =========================
+   Section Objectives
+========================= */
+.about-objectives {
+  padding: 50px 40px;
+  background-color: #f9faff;
+  color: #1a4d8f;
+  text-align: center;
+}
+
+.about-objectives h2 {
+  font-size: 2rem;
+  margin-bottom: 30px;
+}
+
+.objectives-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.objective {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+  width: 250px;
+  box-shadow: 0 6px 10px rgba(0,0,0,0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.objective:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 15px rgba(0,0,0,0.15);
+}
+
+.objective h3 {
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+}
+
+.objective p {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+/* =========================
+   Animations douces
+========================= */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade {
+  animation: fadeInUp 1s ease forwards;
+}
+
+/* =========================
+   Responsive
+========================= */
+@media (max-width: 768px) {
+  .about-hero {
+    flex-direction: column;
+  }
+
+  .about-hero .about-text, .about-hero .about-image {
+    width: 100%;
+  }
+
+  .objectives-list {
+    flex-direction: column;
+    align-items: center;
+  }
+}

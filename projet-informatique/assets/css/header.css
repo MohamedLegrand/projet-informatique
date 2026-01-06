@@ -1,0 +1,98 @@
+/* =========================
+   Header principal
+========================= */
+.site-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 40px;
+  background-color: #ffffff; /* Fond blanc */
+  color: #1a4d8f; /* Texte bleu */
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  font-family: Arial, sans-serif;
+  position: fixed; /* Fixe en haut */
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+/* Logo */
+.site-header .logo h1 {
+  font-size: 1.8rem;
+  margin: 0;
+  color: #1a4d8f;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Menu horizontal */
+.site-header .menu ul {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+  margin: 0;
+  padding: 0;
+  align-items: center;
+}
+
+/* Liens du menu */
+.site-header .menu ul li a {
+  text-decoration: none;
+  color: #1a4d8f;
+  font-weight: bold;
+  padding: 8px 12px;
+  border-radius: 5px;
+  transition: background 0.3s, transform 0.2s;
+}
+
+.site-header .menu ul li a:hover {
+  background-color: #e6f0ff; /* Bleu très clair au survol */
+  transform: translateY(-2px);
+}
+
+/* Bouton Se connecter */
+.site-header .menu ul li a.btn-login {
+  background-color: #1a4d8f;
+  color: #ffffff;
+  padding: 8px 18px;
+  font-weight: bold;
+  border-radius: 5px;
+  transition: background 0.3s, transform 0.2s;
+}
+
+.site-header .menu ul li a.btn-login:hover {
+  background-color: #3a6fb0;
+  transform: translateY(-2px);
+}
+
+/* Pour ne pas que le contenu soit caché derrière le header */
+body {
+  padding-top: 80px; /* Ajuste selon la hauteur de ton header */
+}
+
+/* =========================
+   Responsive Header
+========================= */
+@media (max-width: 768px) {
+  .site-header {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 15px 20px;
+  }
+
+  .site-header .menu ul {
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+  }
+
+  .site-header .menu ul li a {
+    width: 100%;
+    text-align: center;
+  }
+
+  .site-header .logo {
+    margin-bottom: 10px;
+  }
+}

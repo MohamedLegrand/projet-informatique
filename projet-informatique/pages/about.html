@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Boutique Informatique - À propos</title>
+  
+  <!-- Styles globaux -->
+  <link rel="stylesheet" href="../assets/css/header.css">
+  <link rel="stylesheet" href="../assets/css/footer.css">
+  <link rel="stylesheet" href="../assets/css/about.css">
+</head>
+<body>
+
+  <!-- Header réutilisable -->
+  <div id="header-placeholder"></div>
+  <script>
+    fetch('../assets/components/header.html')
+      .then(res => res.text())
+      .then(data => document.getElementById('header-placeholder').innerHTML = data);
+  </script>
+
+  <!-- Section À propos -->
+  <section class="about-hero">
+    <div class="about-text animate-fade">
+      <h1>À propos de notre site</h1>
+      <p>
+        Boutique Informatique a été développé par les élèves de la classe de Première Scientifiques 
+        au Lycée Bilingue d'Ekounou. Notre objectif est de fournir une plateforme conviviale pour 
+        découvrir et acheter facilement des équipements informatiques de qualité.
+      </p>
+      <p>
+        Nous avons mis l'accent sur une interface claire, des informations précises sur les produits, 
+        et une expérience utilisateur agréable pour tous les visiteurs.
+      </p>
+    </div>
+    <div class="about-image animate-fade">
+      <img src="../assets/images/equipe.jpg" alt="Équipe de développement">
+    </div>
+  </section>
+
+  <!-- Section Objectifs -->
+  <section class="about-objectives">
+    <h2 class="animate-fade">Nos objectifs</h2>
+    <div class="objectives-list">
+      <div class="objective animate-fade">
+        <h3>Expérience utilisateur</h3>
+        <p>Créer un site intuitif et facile à naviguer pour tous les utilisateurs.</p>
+      </div>
+      <div class="objective animate-fade">
+        <h3>Produits de qualité</h3>
+        <p>Proposer uniquement des produits fiables et testés pour nos clients.</p>
+      </div>
+      <div class="objective animate-fade">
+        <h3>Support rapide</h3>
+        <p>Répondre rapidement à toutes les demandes et questions de nos visiteurs.</p>
+      </div>
+      <div class="objective animate-fade">
+        <h3>Innovation</h3>
+        <p>Améliorer constamment le site avec de nouvelles fonctionnalités et designs.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer réutilisable -->
+  <div id="footer-placeholder"></div>
+  <script>
+    fetch('../assets/components/footer.html')
+      .then(res => res.text())
+      .then(data => document.getElementById('footer-placeholder').innerHTML = data);
+  </script>
+
+</body>
+</html>
